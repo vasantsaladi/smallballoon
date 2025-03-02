@@ -6,10 +6,12 @@ import { STString } from "../../main/ts/STString";
 
 LOG.level = LogLevel.Info;
 
-this.square = function (value: number): number {
-	return value * value;
-}
+// Define a global context object instead of using 'this' directly
+const globalContext: any = {};
+globalContext.square = function (value: number): number {
+  return value * value;
+};
 
 let interpreter = new STLoader();
-interpreter.setJSContext(this);
+interpreter.setJSContext(globalContext);
 interpreter.runFile("src/test/smalltalk/TestApp.st");

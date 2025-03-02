@@ -14,7 +14,8 @@
 	"author": "fwcd",
 	"license": "ISC",
 	"devDependencies": {
-		"@types/node": "^9.6.5"
+		"@types/node": "^9.6.5",
+		"typescript": "^5.8.2"
 	},
 	"repository": {
 		"type": "git",
